@@ -1,0 +1,17 @@
+ *THIS PROGRAM IS ABOUT SCALA LIBRARY FOR AKKA STREAMS
+ *
+ * REACTIVE STREAM : to process an unbounded amount of data in an async , backpressured way
+ * PUBLISHER : An entity that emits aync(single directional) , unbounded amount of data
+ * SUBSCRIBER: A sink that receives elements
+ * PROCESSOR : In between PUBLISHER AND SUBSCRIBER we have processor which is a transformer that can manipulate the data as it
+ *              flows through the reactive stream
+ *
+ * NOTE : Here everything is async means nothing depends on the other for its action
+ *        Reactive streams is a SPI (Service Provider Interface - https://www.reactive-streams.org/) not an API
+ *
+ * HINTS : backpressured - Can slow down the fast producer when the consumer is very slow
+
+
+
+ ON THE GO ERRORS :
+ I spent almost 5 hours on fixing the sbt part
