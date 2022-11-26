@@ -41,8 +41,16 @@ object PF_BinarySearchGeneral {
   def isSorted[A](as: Array[A], gt: (A, A) => Boolean): Boolean = {
     @annotation.tailrec
     def iter(i: Int): Boolean = {
+      //println(i)
+      //println(as.length -1)
+      //println(i >= as.length - 1)
       if (i >= as.length - 1) true
-      else !gt(as(i), as(i + 1)) && iter(i + 1)
+      else {
+       // println("****************")
+        //println(gt(as(i), as(i + 1)))
+
+        !gt(as(i), as(i + 1)) && iter(i + 1)
+      }
     }
     iter(0)
   }
@@ -53,7 +61,7 @@ object PF_BinarySearchGeneral {
   }*/
 
     def main(args : Array[String]):Unit = {
-      var arrayval = Array(7,9,11,13,15,17,19,21)
+      var arrayval = Array(7,9,11,13,175,17,19,21)
       var key = 11
       //print(BS[Int](arrayval,key,(a: Int, b: Int) => a > b))
       println(isSorted[Int](arrayval,(a : Int,b:Int) => a > b))

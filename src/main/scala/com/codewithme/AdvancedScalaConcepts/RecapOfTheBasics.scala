@@ -1,5 +1,6 @@
 package com.codewithme.AdvancedScalaConcepts
 
+import scala.annotation.tailrec
 import scala.concurrent.Future
 import scala.util.{Failure, Success}
 
@@ -103,5 +104,11 @@ aFuture.onComplete{
     def bark = println("bark!!!")
   }
   "Hari".bark
+
+  @tailrec def factorial(n : Int,acc:Int):Int =
+    if(n <=0) acc else factorial(n-1,n*acc)
+
+  var fact = factorial(5,1)
+
 
 }
