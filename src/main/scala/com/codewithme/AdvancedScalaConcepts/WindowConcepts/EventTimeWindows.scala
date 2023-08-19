@@ -22,12 +22,11 @@ def readPurchasesFromSocket() = {
     .select(from_json(col("value"), onlinePurchaseSchema).as("purchase"))
     .selectExpr("purchase.*")
 }
-  def readPurchasesFromFile() = spark.readStream.schema(onlinePurchaseSchema).json("src/main/resources/data/purchases")
 
 def aggregateBySlidingWindow() = {
 
   val purchasesDF = readPurchasesFromSocket()
-  //Example for tumbling window
+  //Example for sliding window since it have sliding duration as 1 hour
   val WindowByDay = purchasesDF.groupBy(window(col("time"),"1 day","1 hour").as("time"),col("item"))
     .agg(sum("quantity").as("totalQuantity"))
     .select(
