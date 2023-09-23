@@ -9,10 +9,12 @@ package com.codewithme.ScalaProblems
 
 object p01_LastEementInAList extends App {
 
+  println(last(List("D","B","a","A")))
+  println(last(List(1, 1, 2, 3, 5, 8)))
+
   def last[A](list: List[A]): A = {
-    last(list)
+    return list.last
   }
 
-  last(List("D","B","a","A"))
-  last(List(1, 1, 2, 3, 5, 8))
+
 }
