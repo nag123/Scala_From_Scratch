@@ -3,6 +3,11 @@
  print(i.+(1))
  println(i.-(1))
 
+ var t = List(1, 1, 2, 3, 5, 8)
+ list match {
+  case h :: List(t) => h
+ }
+
  var acc: Map[Char,Int] = Map('S' -> 1,'c' -> 1,'a' -> 1,'l' -> 1)
 
  //var currentChar = acc += ('a'-> 1)
