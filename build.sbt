@@ -50,6 +50,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" % "akka-actor-typed_2.12" % "2.6.20",
   "com.typesafe.akka" % "akka-stream_2.12" % "2.6.20",
   "com.typesafe.akka" % "akka-stream-testkit_2.12" % "2.6.20",
-  "com.typesafe.akka" % "akka-http_2.12" % "10.2.8"
+  "com.typesafe.akka" % "akka-http_2.12" % "10.2.8",
+
+  "com.lihaoyi" %% "fansi" % "0.2.3"
 
 )
