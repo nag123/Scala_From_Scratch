@@ -6,7 +6,7 @@ println(List(Nil).length)
   //Procedural Solution
   def length[A](l:List[A]) : Int = length(l)
 
-  //Recursive solution
+  //Recursive    
   def lengthFindingRecursively[A](l:List[A]):Int = l match {
     case Nil => 0
     case h :: tail => 1 + lengthFindingRecursively(tail)
